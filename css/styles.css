@@ -1,0 +1,130 @@
+html {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: #47969A;
+	color: #005252;
+}
+
+.header {
+	font-size: 35px;
+	margin-bottom: 30px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	margin-right: auto;
+	margin-left: auto;
+	width: 400px;
+	height: auto;
+	border-radius: 10px;
+	border: 5px outset #006262;
+	margin-top: 50px;
+	background-color: white;
+	padding: 20px;
+	background-image: url(../img/ball.png);
+	background-position: 230px 40px;
+	background-repeat: no-repeat;
+}
+
+.wrapper:hover {
+	box-shadow: 0 0 15px 5px white;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.sport {
+	font-size: 30px;
+}
+
+.controller {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	border: 2px solid black;
+	box-shadow: 0 0 5px 5px transparent;
+	margin-right: 15px;	
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.ping-pong:checked +.controller {
+	background-image: url("../img/ping-pong.png");
+}
+
+.basket:checked +.controller {
+	background-image: url("../img/basketball.png");
+	background-position: center;
+	background-size: cover;
+}
+
+.volley:checked +.controller {
+	background-image: url("../img/volleyball.png");
+}
+
+.football:checked +.controller {
+	background-image: url("../img/football.png");
+}
+
+.hockey:checked +.controller {
+	background-image: url("../img/hockey.png");
+}
+
+input:disabled +.controller {
+	color: #ccc;
+}
+
+input:disabled:checked .controller {
+	color: #ccc;
+}
+
+input:focus +.controller {
+	box-shadow: 0 0 3px 3px #005252;
+}
+
+label {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.btn {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 15px;
+}
+
+button {
+	color: white;
+	font-weight: bold;
+	width: 90px;
+	height: 30px;
+	border-radius: 5px;		
+	letter-spacing: 1px;
+	background-color: #47969A;
+	border: none;
+	outline: none;
+}
+
+button:hover {
+	background-color: #59BBC0;
+}
